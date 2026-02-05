@@ -1,4 +1,4 @@
-Q1:
-Q2:
-Q3:
-Q4:
+Q1: latencyL#.txt files created
+    throughputL#.txt files created
+Q2: Prediction estimates: RTT = Sum of all paths to get to the other host
+                        : Throughput = Min throughput of paths along the way
