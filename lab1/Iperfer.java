@@ -61,9 +61,10 @@ public class Iperfer{
 
 		// print bytes sent & rate
 		long totalKBSent = byteSent / 1000; // convert from B to KB
-		float rate = totalKBSent / ((endTime - startTime) / 1000); // MB/s
+		long totalMbSent = (totalKBSent / 1000) * 8; // convert to Mb just for calculating rate
+		float rate = totalMbSent / ((endTime - startTime) / 1000); // Mb/s
 		System.out.println("total bytes sent: " + totalKBSent + "KB");
-		System.out.println("rate: " + rate + "MB/s");
+		System.out.println("rate: " + rate + "Mb/s");
 	} catch (UnknownHostException e) {
 			System.err.println("Unknown Host: " + host);
 			System.exit(1);
@@ -98,10 +99,11 @@ public class Iperfer{
 		}
 
 					// print bytes sent & rate
-					long totalByteReceive = byteReceive / 1000; // convert from B to KB
-					float rate = totalByteReceive / ((System.currentTimeMillis() - startTime) / 1000) * 1000; // MB/s
-					System.out.println("total bytes recieve: " + totalByteReceive + "KB");
-					System.out.println("rate: " + rate + "MB/s");
+					long totalKiloByteReceive = byteReceive / 1000; // convert from B to KB
+					long totalMbReceive = (totalKiloByteReceive / 1000) * 8; // conver to Mb just to calculate rate
+					float rate = totalMbReceive / ((System.currentTimeMillis() - startTime) / 1000); // Mb/s
+					System.out.println("total Kilobytes recieve: " + totalKiloByteReceive + "KB");
+					System.out.println("rate: " + rate + "Mb/s");
 				} catch (IOException e) {
 					System.err.println("Exception caught when listening the port");
 					System.exit(1);
