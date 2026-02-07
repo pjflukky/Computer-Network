@@ -1,4 +1,8 @@
 Q1: latencyL#.txt files created
     throughputL#.txt files created
-Q2: Prediction estimates: RTT = Sum of all paths to get to the other host
-                        : Throughput = Min throughput of paths along the way
+
+Q2: Prediction estimates: RTT = L1_avg + L2_avg + L3_avg = 80.345ms + 20.648ms + 60.607ms = 161.6ms 
+                        : Throughput = min_throughput(L1, L2, L3) = L1 = 18.940 Mb/s 
+    actual result: RTT = 160.461ms
+		   Throughput = 18.555 Mb/s
+    explanation: the prediction is very close to the actual result.
