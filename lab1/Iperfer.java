@@ -65,6 +65,8 @@ public class Iperfer{
 		double rate = totalMbSent / ((endTime - startTime) / 1000); // Mb/s
 		System.out.println("total bytes sent: " + totalKBSent + "KB");
 		System.out.printf("rate: %.3f Mb/s\n", rate);
+		out.flush();
+		socket.close();
 	} catch (UnknownHostException e) {
 			System.err.println("Unknown Host: " + host);
 			System.exit(1);
