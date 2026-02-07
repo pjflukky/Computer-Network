@@ -1,0 +1,2 @@
+total Kilobytes recieve: 58008.0KB
+rate: 18.563 Mb/s
