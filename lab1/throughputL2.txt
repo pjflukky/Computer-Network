@@ -1,4 +1,0 @@
-total bytes sent: 105526.0KB
-rate: 42.210 Mb/s
-total Kilobytes recieve: 105526.0KB
-rate: 38.373 Mb/s

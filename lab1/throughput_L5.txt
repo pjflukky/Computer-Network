@@ -1,0 +1,2 @@
+total bytes sent: 69236.0KB
+rate: 27.694 Mb/s
