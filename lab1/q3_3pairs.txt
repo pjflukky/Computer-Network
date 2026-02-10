@@ -1,22 +1,13 @@
-total Kilobytes recieve: 58008.0KB
-rate: 18.563 Mb/s
-total Kilobytes recieve: 5947.0KB
-rate: 2.504 Mb/s
-total Kilobytes recieve: 30847.0KB
-rate: 11.217 Mb/s
-total bytes sent: 58008.0KB
-rate: 23.203 Mb/s
-total bytes sent: 5947.0KB
-rate: 2.379 Mb/s
+total Kilobytes recieve: 51223.0KB
+rate: 16.935 Mb/s
+total Kilobytes recieve: 49464.0KB
+rate: 16.281 Mb/s
+total Kilobytes recieve: 14788.0KB
+rate: 5.970 Mb/s
+total bytes sent: 51223.0KB
+rate: 20.489 Mb/s
+total bytes sent: 14788.0KB
+rate: 5.915 Mb/s
+
 total bytes sent: 30847.0KB
 rate: 12.339 Mb/s
-
-what i test:
-mininet> h4 java Iperfer -s -p 5001 > h4.txt &
-mininet> h9 java Iperfer -s -p 5002 > h9.txt &
-mininet> h10 java Iperfer -s -p 5003 > h10.txt &
-mininet> h1 java Iperfer -c -h 10.0.0.4 -p 5001 -t 20 > h1.txt &
-mininet> h7 java Iperfer -c -h 10.0.0.9 -p 5002 -t 20 > h7.txt &
-mininet> h8 java Iperfer -c -h 10.0.0.10 -p 5003 -t 20 > h8.txt
-mininet> sh cat h4.txt h9.txt h10.txt h1.txt h7.txt h8.txt > q3_3pairs.txt
-
