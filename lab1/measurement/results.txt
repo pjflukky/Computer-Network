@@ -1,0 +1,38 @@
+Q1: latencyL#.txt files created
+    throughputL#.txt files created
+
+
+
+Q2: Prediction estimates: RTT = L1_avg + L2_avg + L3_avg = 80.345ms + 20.648ms + 60.607ms = 161.6ms 
+                        : Throughput = min_throughput(L1, L2, L3) = L1 = 23.77 Mb/s 
+    actual result: RTT = 160.461ms
+		   Throughput = 23.088 Mb/s
+    explanation: the prediction is very close to the actual result.
+
+
+
+Q3: Expectation: for latency it should be the around the same which is (L1+L2+L3) = 161.6ms for all pairs
+		 for throughput the sum of the throughput of all pairs should = throughput of L1 = 23.77 Mb/s  
+    result: h1-h4_RTT = 161.3 ms
+	    h7-h9_RTT = 161.32 ms
+	    h8-h10_RTT = 161.28 ms
+	    h1-h4_throughput = 14.472 Mb/s
+	    h7-h9_throughput = 5.35 Mb/s
+	    h1-h4_throughput = 4.934 Mb/s
+   explanation: for RTT.. the result is almost the same for when only one pair of connection which is make sense. since the number of people communicating shouldn't determine how fast the data
+		transmit through the wire. for throughput, the sum of the result is almost the samme as the throughput of L1 since L1 is the bottole neck, and each host is trying to share the bandwidth of L1.
+
+
+Q4: Expectation: latency of h1-h4 = sum(L1,L2,L3) = 160.461ms
+		 latency of h5-h6 = sum(L4,l2,L5) = 40.424 ms
+		 throughput of h1-h4 = throughput(L2)/2 = 20.423 Mb/s  
+		 throughput of h5-h5 = throughput(L2)/2 = 20.423 Mb/s  
+
+    result: latency of h1-h4 = 161.065 ms
+            latency of h5-h6 = 40.866 ms
+            throughput of h1-h4 = 19.751 Mb/s
+	    throughput of h5-h6 = 23.385 Mb/s
+
+    explanation: for latency again the number of host communicating doesn't effect how fast it travel so the result is just the sum of all Links. for throughput I predicted that both host might distributed the bandwidth evenly
+		 but the result shows that the host that initiate the communication first may get more resource. the sum of throughput is = 19.751 + 23.385 Mb/s = 43.136 Mb/s which is almost the same as throughput of L2. 
+ 
